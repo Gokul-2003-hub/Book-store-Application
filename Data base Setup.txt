@@ -1,0 +1,35 @@
+Set up your MySQL database: Ensure that you have a MySQL serverrunning and create a database
+named library. The tables should include users, employee, books,and orders. Use the following SQL structure:
+
+
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    city VARCHAR(100),
+    password VARCHAR(100),
+    phone_no VARCHAR(15)
+);
+
+CREATE TABLE employee (
+    employee_id INT PRIMARY KEY,
+    employee_name VARCHAR(100),
+    password VARCHAR(100)
+);
+
+CREATE TABLE books (
+    author VARCHAR(100),
+    genre VARCHAR(100),
+    price DECIMAL(10, 2),
+    stock INT,
+    book_name VARCHAR(100) PRIMARY KEY
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    book_name VARCHAR(100),
+    price DECIMAL(10, 2),
+    total_price DECIMAL(10, 2),
+    quantity INT
+);
